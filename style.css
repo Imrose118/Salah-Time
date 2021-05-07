@@ -1,0 +1,359 @@
+body{
+  
+  font-family: 'Itim', cursive;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  color: wheat;
+  z-index:198 ;
+  font-size: 1.5rem;
+}
+main{
+  width: 100%;
+  margin: 0;
+  min-height: 55rem;
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  position: relative;
+  background-attachment: fixed;
+  overflow-x: hidden;
+ 
+}
+#overLay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,94,0.25); 
+   z-index: 1;
+}
+footer{
+  width: 100%;
+  background-color: black;
+  color: gray;
+  font-size: 1.4rem;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  
+}
+#ld{
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 30%;
+  top: 10rem;
+  min-height: 1rem;
+  margin-left: auto; 
+  margin-right: auto;
+  z-index: 2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: rgba(0,0,94,0.4);
+  animation-name: main;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}
+@keyframes main{
+  0%{
+    top:-200rem;
+  }
+  100%{
+    top: 20rem;
+  }
+}
+ul{
+  margin: 0;
+  padding: 0;
+  
+}
+li{
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+  color: aqua;
+  list-style: none;
+  
+}
+
+#rise{
+  width: 20%;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  left:0;
+  top: 31rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  background: rgba(0,0,94,0.4);
+  animation-name: rise;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s;
+}
+@keyframes rise{
+  0%{
+    left:-200rem;
+  }
+  100%{
+    left: 0;
+  }
+}
+#rise div{
+  width: 30%;
+  
+}
+#rise span{
+  width: 100%;
+}
+#anime1{
+  position: relative;
+  min-height: 118.55px;
+}
+#rise img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+@keyframes rotate{
+  
+  25%{
+    transform: rotate(90deg);
+    
+  }
+  50%{
+    transform: rotate(180deg);
+   
+  }
+  75%{
+    transform: rotate(270deg);
+   
+  }
+  100%{
+    transform: rotate(360deg);
+   
+  }
+}
+#left{
+  background-color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  min-height: 1rem;
+  z-index: 2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: rgba(0,0,94,0.4);
+  animation-name: left;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-out;
+}
+@keyframes left{
+  0% {
+    left:-200rem;
+  }
+  100%{
+    left: 0;
+    top: 0;
+  }
+}
+#right{
+  background-color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+  min-height: 1rem;
+  z-index: 2;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: rgba(0,0,94,0.4);
+  animation-name: right;
+  animation-duration: 1.5s;
+  animation-timing-function:ease-out;
+}
+@keyframes right{
+  0% {
+    right:-200rem;
+  }
+  100%{
+    right: 0;
+    top: 0;
+  }
+}
+#left li{
+  width: fit-content;
+  margin-left: 1rem;
+}
+#right li{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1rem;
+}
+
+
+#set{
+  width: 20%;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  right:0;
+  top: 31rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  background: rgba(0,0,94,0.4);
+  animation-name: set;
+  animation-timing-function: ease-out;
+  animation-duration: 1.5s; 
+}
+@keyframes set{
+  0%{
+    right:-200rem;
+  }
+  100%{
+    right: 0;
+  }
+}
+#set div{
+  width: 30%;
+  margin: 1rem 0;
+}
+#set img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  animation-name: sunset;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+
+
+@keyframes sunset{
+  0%{
+    background-color: rgba(47, 255, 0, 0.7);
+  }
+  10%{
+    background-color: rgba(56, 213, 20, 0.6)
+    ;
+  }
+  20%{
+    background-color: rgba(48, 188, 16, 0.6)
+    ;
+  }
+  30%{
+    background-color: rgba(45, 167, 18, 0.6)
+    ;
+  }
+  40%{
+    background-color: rgba(37, 140, 13, 0.6)
+    ;
+  }
+  50%{
+    background-color: rgba(31, 119, 11, 0.6)
+    ;
+  }
+  60%{
+    background-color: rgba(25, 94, 10, 0.6)
+    ;
+  }
+  70%{
+    background-color: rgba(17, 69, 6, 0.6)
+    ;
+  }
+  80%{
+    background-color: rgba(11, 47, 3, 0.6)
+    ;
+  }
+  90%{
+    background-color: rgba(1, 4, 0, 0.6)
+    ;
+  }
+  100%{
+    background-color:transparent;
+
+
+  }
+}
+
+
+
+@media(max-width:1300px){
+  #right li{
+    justify-content: flex-start;
+    margin-left: 1rem;
+  }
+  #rise,#set span{
+    font-size: 1rem;
+  }
+ 
+}
+@media(max-width:905px){
+  #rise, #set{
+    width: 30%;
+  }
+}
+@media(max-width:620px){
+  header{
+    font-size: 1.1rem;
+  }
+ #left{
+   width: 33%;
+ }
+ #right{
+   width: 35%;
+   
+ }
+ #ld{
+   width: 100%;
+   top: 25rem;
+ }
+ #rise, #set{
+   top: 43rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   padding-bottom: 1rem;
+   
+ }
+
+ #set{
+  top: 44.4rem;
+   line-height: 1rem;
+ }
+ #set span{
+   font-size: 0.9rem;
+ }
+ footer{
+   width: 98%;
+ }
+}
