@@ -3,7 +3,7 @@ let lat=0,long=0,hD=0,hM=0,hY=-0;
 navigator.geolocation.getCurrentPosition(p=>{
   lat=p.coords.latitude;
   long=p.coords.longitude;
- 
+  find(lat,long);
 });
 let times={};
 d=new Date();
@@ -26,14 +26,19 @@ function weap(){
 }
 
 //Find the prayer times
-setTimeout(function(){
-weap();
-fetch(`http://api.aladhan.com/v1/hijriCalendar?latitude=${lat}&longitude=${long}&method=1&midnightMode=1&month=${hM}&year=${hY}`)
-.then(res=>res.json())
-.then(data=>{
-  times=data.data[hD-1].timings;
-  showTimes(times);
-})},500);
+function find(lat,long){
+  if(lat==0 && long==0){
+    setTimeout(find,100,lat,long);
+  }
+  else{
+      weap();
+      fetch(`http://api.aladhan.com/v1/hijriCalendar?latitude=${lat}&longitude=${long}&method=1&midnightMode=1&month=${hM}&year=${hY}`)
+      .then(res=>res.json())
+      .then(data=>{
+        times=data.data[hD-1].timings;
+        showTimes(times);});
+  }
+}
 
 //function to show times
 function showTimes(times){
@@ -60,6 +65,7 @@ function showTimes(times){
 
   //addtoUL
   function addtoUL(times){
+    console.log(times);
     list.innerHTML=`
       <li><div>Fajr</div><div>${times.Fajr}</div></li>
       <li><div>Dhuhr</div><div>${times.Dhuhr}</div></li>
