@@ -330,15 +330,26 @@ li{
   }
  
  #left{
-   width: 33%;
+   width: 45%;
  }
  #right{
-   width: 35%;
-   
+   width: 45%;
+  min-height: 316px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
  }
+ #right li{
+  
+ }
+ 
  #ld{
    width: 100%;
-   top: 25rem;
+   top: 22rem;
+  
  }
  #rise, #set{
    top: 43rem;
@@ -349,10 +360,14 @@ li{
    padding-bottom: 1rem;
    
  }
-
+ #rise{
+   top: 44.4rem;
+ }
  #set{
   top: 44.4rem;
    line-height: 1rem;
+   min-height: 192.15px;
+   padding: 0;
  }
  #set span{
    font-size: 0.9rem;
