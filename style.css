@@ -325,6 +325,9 @@ li{
   header{
     font-size: 1.1rem;
   }
+  main{
+    background-attachment: scroll;
+  }
  #left{
    width: 33%;
  }
