@@ -322,6 +322,7 @@ li{
   }
   main{
     background-attachment: scroll;
+    background-size: cover;
   }
 }
 @media(max-width:620px){
@@ -342,8 +343,9 @@ li{
   justify-content: center;
 
  }
- #right li{
-  
+ 
+ #overlay{
+   background-attachment: scroll;
  }
  
  #ld{
@@ -361,10 +363,10 @@ li{
    
  }
  #rise{
-   top: 44.4rem;
+   top: 43rem;
  }
  #set{
-  top: 44.4rem;
+  top: 43rem;
    line-height: 1rem;
    min-height: 192.15px;
    padding: 0;
