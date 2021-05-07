@@ -7,7 +7,7 @@ navigator.geolocation.getCurrentPosition(p=>{
 });
 let times={};
 d=new Date();
-fetch(`http://api.aladhan.com/v1/gToH?date=${d.getDate()}-${d.getMonth()+1}-${d.getFullYear()}`)
+fetch(`https://api.aladhan.com/v1/gToH?date=${d.getDate()}-${d.getMonth()+1}-${d.getFullYear()}`)
 .then(res=>res.json())
 .then(data=>{
   hD=data.data.hijri.day;
@@ -28,11 +28,11 @@ function weap(){
 //Find the prayer times
 function find(lat,long){
   if(lat==0 && long==0){
-    setTimeout(find,100,lat,long);
+    setTimeout(find,10,lat,long);
   }
   else{
       weap();
-      fetch(`http://api.aladhan.com/v1/hijriCalendar?latitude=${lat}&longitude=${long}&method=1&midnightMode=1&month=${hM}&year=${hY}`)
+      fetch(`https://api.aladhan.com/v1/hijriCalendar?latitude=${lat}&longitude=${long}&method=1&midnightMode=1&month=${hM}&year=${hY}`)
       .then(res=>res.json())
       .then(data=>{
         times=data.data[hD-1].timings;
