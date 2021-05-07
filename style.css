@@ -320,14 +320,15 @@ li{
   #rise, #set{
     width: 30%;
   }
+  main{
+    background-attachment: scroll;
+  }
 }
 @media(max-width:620px){
   header{
     font-size: 1.1rem;
   }
-  main{
-    background-attachment: scroll;
-  }
+ 
  #left{
    width: 33%;
  }
