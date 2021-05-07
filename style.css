@@ -45,7 +45,7 @@ footer{
   font-size: 1.4rem;
   padding: 0.5rem 0.5rem;
   text-align: center;
-  
+  overflow-x: hidden;
 }
 #ld{
   
@@ -332,6 +332,8 @@ li{
  
  #left{
    width: 45%;
+   box-sizing: border-box;
+   min-height: 316px;
  }
  #right{
    width: 45%;
@@ -364,6 +366,8 @@ li{
  }
  #rise{
    top: 43rem;
+   box-sizing: border-box;
+   min-height: 192.15px;
  }
  #set{
   top: 43rem;
